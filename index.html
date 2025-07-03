@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript Color scheme generator">
+    <meta name="author" content="Run Qi (Jack) Li">
+    <!-- CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Tindog - Dating for Dogs!</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <!-- <img class="nav-icons" src="images/icon-profile.png" alt="an grey head icon"> -->
+            <i class="fa-solid fa-dog nav-icons" id="profile-icon"></i>
+            <img class="nav-icons" id="tindog-logo" src="images/logo.png" alt="illustration of a dog's paw">
+            <i class="fa-solid fa-comment nav-icons" id="chat-icon"></i>
+        </div>
+    </header>
+
+    <div class="user-under-review-modal hidden" id="user-profile-modal">
+        <img class="profile-teddy" src="./images/dog-teddy.jpg" alt="a small white dog staring at the camera with a raise eyebrow">
+        <h1>Teddy, 11</h1>
+        <p>Hello Sir. We regret to inform you that your account has been suspended.
+        <p>We have received a number of complaints about your behavior from other Tindog users, and we are currently investigating them. </p>
+        <p>You will not be able to edit your profile as it is currently under review by our staff.</p>
+
+        <button id="profile-close-button" class="rectangular-btn-primary brand-gradient">Okay</button>
+    </div>
+
+    <div class="user-under-review-modal hidden" id="homepage-modal">
+        <img src="images/tindog-icon.png" class="tindog-icon"
+            alt="an icon of a dog's paw with Tindog and world edition written on the right in vibrant colors">
+
+        <span>Tindog was created by Run Qi (Jack) Li as a part of his solo projects for Module 7 of Next Level
+            JavaScript of the <a href="https://scrimba.com/learn/frontend">Scrimba Frontend Developer Course</a>.
+        </span>
+
+        <span>The features of this app was inspired by Daniel Beck Rose, who is also a Scrimba student; You
+            can check <a href="https://tindogbarcelona.netlify.app/?dog=toby&group=facebook">his version</a> here.</span>
+
+        <span>All the dog profiles here are, unfortunately, ficticious, but are all created with ❤️ </span>
+
+        <span>Jack has a <a href="https://jack-codes.netlify.app/">portfolio website</a>,
+            and a <a href="https://www.linkedin.com/in/jackli921/">LinkedIn profile</a>. If you want to get in touch
+            with him, just <a href="mailto: li.jack0707@gmail.com">Email</a></span>
+        <button id="homepage-close-button" class="rectangular-btn-primary brand-gradient">Okay</button>
+    </div>
+
+    <div class="share-modal" id="share-modal">
+        <div id="share-modal-text-container"></div>
+        <div class="share-modal-social-media-container">
+            <a  href="#"><img class="circle-btn-primary" src="./images/facebook-icon.png" alt=""></a>
+            <a  href="#"><img class="circle-btn-primary" src="./images/whatsapp-icon.png" alt=""></a>
+            <a  href="#"><img class="circle-btn-primary" src="./images/twitter-icon.png" alt=""></a>
+            <a  href="#"><img class="circle-btn-primary" src="./images/copy-link-icon.png" alt=""></a>
+            <a  href="#"><img class="circle-btn-primary" src="./images/weixin.svg" alt=""></a>
+            <a  href="#"><img class="circle-btn-primary" src="./images/email-icon.png" alt=""></a>
+        </div>
+        <button id="close-share-modal-btn" class="rectangular-btn-primary brand-gradient">Back</button>
+    </div>
+
+    <main class="main-container">
+        <div class="profile-container" id="profile-container">
+
+
+            <div id="profile-card"></div>
+            <div class="expanded-profile-container hidden" id="expanded-profile"></div>
+        </div>
+
+        <div class="button-container">
+            <button data-key="65" class="key circle-btn-primary undo-btn" id="undo-btn" disabled></button>
+            <button data-key="83" class="key circle-btn-primary reject-btn" id="reject-btn"></button>
+            <button data-key="68" class="key circle-btn-primary accept-btn" id="accept-btn"></button>
+            <button data-key="70" class="key circle-btn-primary super-btn" id="super-btn"></button>
+        </div>
+
+        </div>
+
+
+        <audio data-key="65" src="sounds/rewind.wav"></audio>
+        <audio data-key="83" src="sounds/reject.wav"></audio>
+        <audio data-key="68" src="sounds/accept.wav"></audio>
+        <audio data-key="70" src="sounds/super.wav"></audio>
+    </main>
+    <script src="/app.js" type="module"></script>
+</body>
+
+</html>
