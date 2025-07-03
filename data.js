@@ -216,9 +216,9 @@ const fakeDogsData = [
 ]
 
 const instructions = {
-    acceptBtn: `  <div class="instruction-text slide-right">Press <img "instruction-icons" src="./images/icon-accept.png"> to like a dog!</div>`,
-    superBtn: `<div class="instruction-text slide-left"><span>Fell in love? Press <img class = "instruction-icons" src='./images/icon-super.png'> </div> <div class="instruction-text slide-left">to superlike a dog!</div>`,
-    rejectBtn: `<div class="instruction-text slide-right">Press <img "instruction-icons" src="./images/icon-reject.png"> to reject a dog!</div>`,
+    acceptBtn: `  <div class="instruction-text slide-right">Press <img "instruction-icons" src="./images/icon-accept.png"> to like a pet!</div>`,
+    superBtn: `<div class="instruction-text slide-left"><span>Fell in love? Press <img class = "instruction-icons" src='./images/icon-super.png'> </div> <div class="instruction-text slide-left">to superlike a pet!</div>`,
+    rejectBtn: `<div class="instruction-text slide-right">Press <img "instruction-icons" src="./images/icon-reject.png"> to reject a pet!</div>`,
     undoBtn:` <div class="instruction-text slide-left">Regretting your decision? </div> <span class="instruction-text slide-left">Press <img src="./images/icon-undo.png" class="instruction-icons"> to go back!</span>`,
     infoBtn:` <div class="instruction-text slide-right"> Remember! It's not all about the looks! Press </div> <span class="instruction-text slide-right"><img src="/images/info-icon.png" class="primary-icon"> to read the profile!</span>`,
     downArrow: `<p class="instruction-text">Tap <img src="/images/down-arrow.png" class="primary-icon"> to view the dog's full photo again!</p>`,

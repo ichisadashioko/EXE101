@@ -45,4 +45,3 @@ Alternatively, you can:
  1. Rebuild the existing project using React
  2. Create a backend to pull data directly from dedicated database
  3. Improve responsiveness for tablet and desktop screen sizes
-

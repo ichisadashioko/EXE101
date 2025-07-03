@@ -10,14 +10,10 @@ function renderAgreementPage(){
     profileCard.classList.add('welcome-screen')
     profileCard.style.backgroundImage = "url('./images/landing-bg.jpg')"
     profileCard.innerHTML = `
-        <img class="tindog-icon-welcome slide-right" id="tindog-icon-welcome" src="./images/tindog-icon.png">
-
         <i class="fa-solid fa-heart heart-icon hidden" id="heart-icon"></i>
         <div class="consent-modal slide-left" id="consent-modal">
-            <p class="terms">To continue using our service, please confirm that you are not a cat</p>
-
             <div class="consent-input-box">
-                <p class="brand-gradient-text">I confirm that I am not a cat</p>
+                <p class="brand-gradient-text">I confirm that I am a pet owner</p>
                 <label class="switch">
                     <input type="checkbox" id="consent-checkbox">
                     <span class="slider round"></span>
@@ -52,7 +48,7 @@ function renderWelcomeAnimations(){
 
     heartIcon.classList.remove("hidden")
     heartIcon.classList.add("fade-in", "enlarge")
-    document.querySelector("#tindog-icon-welcome").classList.add("move-left")
+    // document.querySelector("#tindog-icon-welcome").classList.add("move-left")
     document.querySelector("#consent-modal").classList.add("move-right")
     profileCard.classList.add('slow-zoom')
     // remove the opacity = 1 property in slow-zoom animation to make anything visible
@@ -68,8 +64,8 @@ function renderWelcomePage(){
     profileCard.style.backgroundImage = "url('./images/welcome2-bg.jpg')"
     profileCard.innerHTML = `
         <div class="slide-right welcome-text-modal">
-        <h2>🎉 Welcome to <span class="brand-gradient-text">Tindog</span> </h2>
-        <p>A fake dating app for canines everywhere! </p>
+        <h2>🎉 Welcome to <span class="brand-gradient-text">Petti</span> </h2>
+        <p>A dating app for pets! </p>
         <br>
         <h3>Ready for a walkthrough?</h3>
 
