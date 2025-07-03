@@ -2,7 +2,7 @@ const realDogsData = [
 
     {
         name: "Emilia",
-        avatar: "/images/dog-emilia.jpg",
+        avatar: "./images/dog-emilia.jpg",
         age: 13,
         city: "Berlin",
         country: "Germany",
@@ -15,7 +15,7 @@ const realDogsData = [
     },
     {
         name: "Terry",
-        avatar: "/images/dog-terry.jpg",
+        avatar: "./images/dog-terry.jpg",
         age: 9,
         city: "Venice",
         country: "Italy",
@@ -28,7 +28,7 @@ const realDogsData = [
     },
     {
         name: "Koha",
-        avatar: "/images/dog-koharu.jpg",
+        avatar: "./images/dog-koharu.jpg",
         age: 3,
         city: "Gifu",
         country: "Japan",
@@ -41,7 +41,7 @@ const realDogsData = [
     },
     {
         name: "Lily",
-        avatar: "/images/dog-lily.jpg",
+        avatar: "./images/dog-lily.jpg",
         age: 6,
         city: "Brighton",
         country: "United Kingdom",
@@ -54,7 +54,7 @@ const realDogsData = [
     },
     {
         name: "Ikesuke",
-        avatar: "/images/dog-ikesuke.jpg",
+        avatar: "./images/dog-ikesuke.jpg",
         age: 8,
         city: "Honlulu",
         country: "United States",
@@ -67,7 +67,7 @@ const realDogsData = [
     },
     {
         name: "Milo",
-        avatar: "/images/dog-milo.jpg",
+        avatar: "./images/dog-milo.jpg",
         age: 10,
         city: "Vienna",
         country: "Austria",
@@ -81,7 +81,7 @@ const realDogsData = [
 
     {
         name: "Bob",
-        avatar: "/images/dog-bob.jpg",
+        avatar: "./images/dog-bob.jpg",
         age: 12,
         city: "Phenoix",
         country: "Arizona",
@@ -95,7 +95,7 @@ const realDogsData = [
 
     {
         name: "Doge",
-        avatar: "/images/dog-doge.jpg",
+        avatar: "./images/dog-doge.jpg",
         age: 5,
         city: "Chitose",
         country: "Japan",
@@ -109,7 +109,7 @@ const realDogsData = [
 
         {
         name: "Martin",
-        avatar: "/images/dog-martin.jpg",
+        avatar: "./images/dog-martin.jpg",
         age: 6,
         city: "Auckland",
         country: "New Zealand",
@@ -123,7 +123,7 @@ const realDogsData = [
 
         {
         name: "Jeff",
-        avatar: "/images/dog-jeff.jpg",
+        avatar: "./images/dog-jeff.jpg",
         age: 3,
         city: "San Francisco",
         country: "U.S.A",
@@ -136,7 +136,7 @@ const realDogsData = [
     },
         {
         name: "Izzy",
-        avatar: "/images/dog-Izzy.jpg",
+        avatar: "./images/dog-Izzy.jpg",
         age: 7,
         city: "Berlin",
         country: "Germany",
@@ -149,7 +149,7 @@ const realDogsData = [
     },
         {
         name: "Dustin",
-        avatar: "/images/dog-dustin.png",
+        avatar: "./images/dog-dustin.png",
         age: 10,
         city: "Moscow",
         country: "Russia",
@@ -167,7 +167,7 @@ const fakeDogsData = [
 
     {
         name: "Fake Dog",
-        avatar: "/images/dog-rex.jpg",
+        avatar: "./images/dog-rex.jpg",
         age: 5,
         city: "Taxes",
         country: "United States",
@@ -179,7 +179,7 @@ const fakeDogsData = [
     },
     {
         name: "Another fake dog",
-        avatar: "/images/dog-bella.jpg",
+        avatar: "./images/dog-bella.jpg",
         age: 3,
         city: "Barcelona",
         country: "Spain",
@@ -191,7 +191,7 @@ const fakeDogsData = [
     },
     {
         name: "faker dog",
-        avatar: "/images/dog-fake.jpg",
+        avatar: "./images/dog-fake.jpg",
         age: 11,
         city: "Cuzco",
         country: "Chile",
@@ -203,7 +203,7 @@ const fakeDogsData = [
     },
     {
         name: "One last fake dog",
-        avatar: "/images/dog-rex.jpg",
+        avatar: "./images/dog-rex.jpg",
         age: 1,
         city: "Taxes",
         country: "United States",
