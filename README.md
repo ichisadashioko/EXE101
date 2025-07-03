@@ -1,5 +1,5 @@
 <div align="center">
- <img src="/images/tindog-icon.png" width="300px">
+ <img src="./images/tindog-icon.png" width="300px">
 </div>
 
 ## Tindog
@@ -37,7 +37,7 @@ Alternatively, you can:
 
 ## Demo
 <div align="center">
- <img src="/images/demo.gif" height="600px">
+ <img src="./images/demo.gif" height="600px">
 </div>
 
 ## Improvements

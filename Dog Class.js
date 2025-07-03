@@ -18,7 +18,7 @@ class DogClass{
                 <span id="dog-age">${age}</span></h4>
 
                 <div id="location-overlay">
-                    <img src="/images/location-icon.png" id="location-icon">
+                    <img src="./images/location-icon.png" id="location-icon">
                     <span id="dog-location"> ${city}, ${country}</span>
                 </div>
 
@@ -26,8 +26,8 @@ class DogClass{
             </div>
 
 
-            <img src="/images/info-icon.png" id="info-icon">
-            <img src="/images/down-arrow.png" id="down-arrow" class="hidden">
+            <img src="./images/info-icon.png" id="info-icon">
+            <img src="./images/down-arrow.png" id="down-arrow" class="hidden">
 
 
             <div id="instruction" class="instruction-overlay"></div>
@@ -38,7 +38,7 @@ class DogClass{
         return `
             <h4 class="name-additional">${this.name},  <span class="age-additional">${this.age}</span></h4>
             <div class="location-additional">
-                <img src="/images/location-icon-grey.png" id="location-icon-additional">
+                <img src="./images/location-icon-grey.png" id="location-icon-additional">
                 <span> ${this.city}, ${this.country}</span>
             </div>
             <hr>

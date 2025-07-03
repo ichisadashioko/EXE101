@@ -290,7 +290,7 @@ function renderNextDog(){
 
 function renderBadge(badgeName, addBadge){
     const badgeContainer = document.getElementById("badge-container")
-    badgeContainer.innerHTML = `<img class="badge ${addBadge?"stamp-in": "stamp-out"}" id="badge"src="/images/${badgeName}.png">`
+    badgeContainer.innerHTML = `<img class="badge ${addBadge?"stamp-in": "stamp-out"}" id="badge"src="./images/${badgeName}.png">`
     const badge = document.getElementById("badge")
 }
 

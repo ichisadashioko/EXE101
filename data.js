@@ -220,8 +220,8 @@ const instructions = {
     superBtn: `<div class="instruction-text slide-left"><span>Fell in love? Press <img class = "instruction-icons" src='./images/icon-super.png'> </div> <div class="instruction-text slide-left">to superlike a pet!</div>`,
     rejectBtn: `<div class="instruction-text slide-right">Press <img "instruction-icons" src="./images/icon-reject.png"> to reject a pet!</div>`,
     undoBtn:` <div class="instruction-text slide-left">Regretting your decision? </div> <span class="instruction-text slide-left">Press <img src="./images/icon-undo.png" class="instruction-icons"> to go back!</span>`,
-    infoBtn:` <div class="instruction-text slide-right"> Remember! It's not all about the looks! Press </div> <span class="instruction-text slide-right"><img src="/images/info-icon.png" class="primary-icon"> to read the profile!</span>`,
-    downArrow: `<p class="instruction-text">Tap <img src="/images/down-arrow.png" class="primary-icon"> to view the dog's full photo again!</p>`,
+    infoBtn:` <div class="instruction-text slide-right"> Remember! It's not all about the looks! Press </div> <span class="instruction-text slide-right"><img src="./images/info-icon.png" class="primary-icon"> to read the profile!</span>`,
+    downArrow: `<p class="instruction-text">Tap <img src="./images/down-arrow.png" class="primary-icon"> to view the dog's full photo again!</p>`,
     scrollDownText:` <div class="instruction-text">Scroll down, read their profile, and tap </div> <div class="instruction-text"> <img class="share-icon" src="./images/share-btn.svg"> to share their profile!</div>`,
     readyText:` <p class="instruction-text">Other icons do things to! Try them out! Ready to meet some dogs today?</p>
         <button id="ready-btn" class="rectangular-btn-primary brand-gradient">Ready!</button>`
