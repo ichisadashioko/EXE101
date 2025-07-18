@@ -1,8 +1,8 @@
-import {realDogsData, fakeDogsData} from "./data.js";
+import { realDogsData, fakeDogsData } from "./data.js";
 import dogClass from "./Dog Class.js";
-import { enableBtns , disableBtns, undoBtn, acceptBtn, superBtn, rejectBtn } from "./utils.js";
+import { enableBtns, disableBtns, undoBtn, acceptBtn, superBtn, rejectBtn } from "./utils.js";
 import { renderAgreementPage, checkUserConsent, renderWelcomeAnimations, renderWelcomePage } from "./welcomeScreen.js";
-import {isInstructionNeeded, renderScrollInstruction, renderPressDownBtnInstruction, renderFinalInstruction } from "./instructions.js"
+import { isInstructionNeeded, renderScrollInstruction, renderPressDownBtnInstruction, renderFinalInstruction } from "./instructions.js"
 
 let RandomizedRealDogData = realDogsData.sort(() => Math.random() - 0.5)
 let modifiableDogsData = [...fakeDogsData, ...RandomizedRealDogData];
@@ -33,14 +33,14 @@ let currentDog = getNewDog() // call on getNewDog function to get the object dat
 renderAgreementPage()
 checkUserConsent()
 
-function getNewDog(){
+function getNewDog() {
     let nextDogData = modifiableDogsData[dogArrayIndex]
-    return nextDogData ? new dogClass (nextDogData): {}
+    return nextDogData ? new dogClass(nextDogData) : {}
     // if "return nextDogData" returns a trucy value to the parent function of getNewDog(), then return the new constructed object instead
 }
 
 // renders dog data to DOM then checks index to determine if the tutorial instruction function should be called
-function renderProfile(){
+function renderProfile() {
     profileCard.innerHTML = currentDog.getDogHtml()
     expandedProfile.innerHTML = currentDog.getAdditionalHtml()
     isInstructionNeeded()
@@ -51,14 +51,14 @@ function renderProfile(){
 
 }
 
-function renderRealDogArr(){
+function renderRealDogArr() {
     enableBtns()
     dogArrayIndex += 2
     currentDog = getNewDog()
     renderProfile()
 }
 
-window.addEventListener('click', function(e){
+window.addEventListener('click', function (e) {
     const audio = document.querySelector(`audio[data-key="${e.target.dataset.key}"]`)
     const key = document.querySelector(`.key[data-key="${e.target.dataset.key}"]`)
     if (!audio) return
@@ -67,7 +67,7 @@ window.addEventListener('click', function(e){
 
 })
 
-function handleInfoBtnClick(){
+function handleInfoBtnClick() {
     const dogAvatar = document.getElementById('dog-avatar')
     const textOverlay = document.getElementById('text-overlay-container')
     const infoBtn = document.getElementById('info-icon')
@@ -76,36 +76,36 @@ function handleInfoBtnClick(){
     const isFakeDogs = dogArrayIndex < 2 || dogArrayIndex === 3
     const isFirstTimeLookAtDemoDog = currentDog.name === "faker dog" && currentDog.hasBeenSwiped === false
 
-    if(isFakeDogs || isFirstTimeLookAtDemoDog){
+    if (isFakeDogs || isFirstTimeLookAtDemoDog) {
         infoBtn.classList.add('not-allowed')
     }
 
-    else{
-        infoBtn.addEventListener('click', ()=>{
+    else {
+        infoBtn.addEventListener('click', () => {
             profileCard.classList.remove("zoom-out")
             profileCard.classList.add("zoom-in")
 
-            setTimeout(()=>{
+            setTimeout(() => {
                 textOverlay.style.display = "none"
                 profileCard.style.height = "60%"
                 expandedProfile.classList.remove('hidden')
                 expandedProfile.scrollTop = 0;
-            },300)
+            }, 300)
 
             infoBtn.classList.toggle('hidden')
             downArrow.classList.toggle('hidden')
             renderScrollInstruction()
         })
 
-        downArrow.addEventListener('click', ()=>{
+        downArrow.addEventListener('click', () => {
             profileCard.classList.remove("zoom-in")
             profileCard.classList.add("zoom-out")
 
-            setTimeout(()=>{
+            setTimeout(() => {
                 textOverlay.style.display = "block"
                 profileCard.style.height = "100%"
 
-            },300)
+            }, 300)
 
             infoBtn.classList.toggle('hidden')
             downArrow.classList.toggle('hidden')
@@ -115,32 +115,32 @@ function handleInfoBtnClick(){
     }
 }
 
-function handleShareBtnClick(){
+function handleShareBtnClick() {
     const shareBtn = document.querySelector('#share-btn')
     const isDemoDog = currentDog.hasBeenSwiped === false && dogArrayIndex === 2
     const isFakeDogs = dogArrayIndex === 0 || dogArrayIndex === 1 || dogArrayIndex === 3
 
-    if (isDemoDog || isFakeDogs){
+    if (isDemoDog || isFakeDogs) {
         return
     }
 
     const title = document.title;
     const url = document.querySelector('link[rel=canonical]') ? document.querySelector('link[rel=canonical]').href : document.location.href;
 
-    shareBtn.addEventListener('click',()=>{
+    shareBtn.addEventListener('click', () => {
 
 
-        if(navigator.share){
+        if (navigator.share) {
             navigator.share({
-                title:title,
-                url:url
-            }).then(()=>{
+                title: title,
+                url: url
+            }).then(() => {
                 console.log("Thanks for sharing!")
-                 shareModal.style.display = "none"
+                shareModal.style.display = "none"
                 dogArrayIndex === 2 ? renderPressDownBtnInstruction() : dogArrayIndex
             })
-            .catch(console.error)
-        }else{
+                .catch(console.error)
+        } else {
             shareModal.style.display = "flex"
             const shareModalText = document.querySelector('#share-modal-text-container')
             shareModalText.innerHTML = `<p class="share-modal-text">
@@ -152,29 +152,29 @@ function handleShareBtnClick(){
 }
 
 
-closeShareModalBtn.addEventListener('click',()=>{
+closeShareModalBtn.addEventListener('click', () => {
     shareModal.style.display = "none"
-       dogArrayIndex === 2 ? renderPressDownBtnInstruction() : dogArrayIndex
+    dogArrayIndex === 2 ? renderPressDownBtnInstruction() : dogArrayIndex
 })
 
-undoBtn.addEventListener('click', ()=>{
-    if(dogArrayIndex > 4 || dogArrayIndex === 3){
-        setTimeout(()=>{
+undoBtn.addEventListener('click', () => {
+    if (dogArrayIndex > 4 || dogArrayIndex === 3) {
+        setTimeout(() => {
             disableBtns()
             dogArrayIndex -= 1
-            slideDirection = dogArrayIndex > 3 ? "shrink-left": slideDirection
+            slideDirection = dogArrayIndex > 3 ? "shrink-left" : slideDirection
             currentDog = getNewDog()
             enableBtns()
             undoBtn.disabled = false;
             renderProfile()
 
-            if(currentDog.hasBeenLiked === true){
+            if (currentDog.hasBeenLiked === true) {
                 renderBadge(`badge-like`, false)
             }
-            else if(currentDog.hasBeenSuperLiked === true )
+            else if (currentDog.hasBeenSuperLiked === true)
                 renderBadge(`badge-super`, false)
 
-            else{
+            else {
                 renderBadge(`badge-nope`, false)
             }
 
@@ -182,11 +182,11 @@ undoBtn.addEventListener('click', ()=>{
             modifiableDogsData[dogArrayIndex].hasBeenSuperLiked = false
             modifiableDogsData[dogArrayIndex].hasBeenSwiped = true
 
-        },300)
+        }, 300)
     }
 })
 
-rejectBtn.addEventListener('click', ()=>{
+rejectBtn.addEventListener('click', () => {
     disableBtns()
 
     // currentDog.hasBeenSwiped = true     // change the swiped and liked states to true
@@ -197,8 +197,8 @@ rejectBtn.addEventListener('click', ()=>{
 
 
     setTimeout(() => {
-            const dogAvatar = document.getElementById('dog-avatar')
-            dogAvatar.classList.add('shrink-left')
+        const dogAvatar = document.getElementById('dog-avatar')
+        dogAvatar.classList.add('shrink-left')
     }, 300);
 
     // slideDirection = dogArrayIndex > 3 ? "swipe-left": slideDirection
@@ -207,7 +207,7 @@ rejectBtn.addEventListener('click', ()=>{
 })
 
 
-acceptBtn.addEventListener('click', ()=>{
+acceptBtn.addEventListener('click', () => {
     disableBtns()
     // currentDog.hasBeenSwiped = true     // change the swiped and liked states to true
     // currentDog.hasBeenLiked = true
@@ -227,7 +227,7 @@ acceptBtn.addEventListener('click', ()=>{
 })
 
 
-superBtn.addEventListener('click',()=>{
+superBtn.addEventListener('click', () => {
     disableBtns()
     // currentDog.hasBeenSwiped = true     // change the swiped and liked states to true
     // currentDog.hasBeenLiked = true
@@ -239,62 +239,72 @@ superBtn.addEventListener('click',()=>{
     dogArrayIndex += 1 // increase object index by one
 
     setTimeout(() => {
-       const dogAvatar = document.getElementById('dog-avatar')
+        const dogAvatar = document.getElementById('dog-avatar')
         dogAvatar.classList.add('shrink-up')
     }, 300);
 
     renderNextDog()
 })
 
-tindogLogo.addEventListener('click', ()=>{
+tindogLogo.addEventListener('click', () => {
     homepageModal.style.display = "flex"
-    document.getElementById('homepage-close-button').addEventListener('click',()=>{
+    document.getElementById('homepage-close-button').addEventListener('click', () => {
         homepageModal.style.display = "none"
     })
 })
 
 
-profileIcon.addEventListener('click',()=>{
+profileIcon.addEventListener('click', () => {
     renderUserUnderReviewModal()
 })
 
-chatIcon.addEventListener('click', ()=>{
-    renderUserUnderReviewModal()
+
+function toggle_chat_ui() {
+    let ui_el = document.getElementById('user-chat-modal');
+    if (ui_el.style.display == "flex") {
+        ui_el.style.display = "none";
+    } else {
+        ui_el.style.display = "flex";
+    }
+}
+
+chatIcon.addEventListener('click', () => {
+    toggle_chat_ui()
 })
 
-function renderUserUnderReviewModal(){
+function renderUserUnderReviewModal() {
     userProfileModal.style.display = "flex"
-    document.getElementById('profile-close-button').addEventListener('click',()=>{
-    userProfileModal.style.display = "none"
-})
+    document.getElementById('profile-close-button').addEventListener('click', () => {
+        userProfileModal.style.display = "none"
+    })
 }
 
 
 
-function renderNextDog(){
-        if(dogArrayIndex < modifiableDogsData.length){
-            setTimeout(()=>{
-                currentDog = getNewDog()
-                renderProfile()
+function renderNextDog() {
+    if (dogArrayIndex < modifiableDogsData.length) {
+        setTimeout(() => {
+            currentDog = getNewDog()
+            renderProfile()
 
-                if(dogArrayIndex > 4){
+            if (dogArrayIndex > 4) {
                 enableBtns()
-                }
+            }
 
-            },500)
-        }
-        else {
-            setTimeout(()=>{renderEndScreen()}, 500)
-        }
+        }, 500)
+    }
+    else {
+        setTimeout(() => { renderEndScreen() }, 500)
+    }
 }
 
-function renderBadge(badgeName, addBadge){
+function renderBadge(badgeName, addBadge) {
     const badgeContainer = document.getElementById("badge-container")
-    badgeContainer.innerHTML = `<img class="badge ${addBadge?"stamp-in": "stamp-out"}" id="badge"src="./images/${badgeName}.png">`
+    badgeContainer.innerHTML = `<img class="badge ${addBadge ? "stamp-in" : "stamp-out"}" id="badge"src="./images/${badgeName}.png">`
     const badge = document.getElementById("badge")
 }
 
-function renderEndScreen(){
+function renderEndScreen() {
     expandedProfile.classList.add('hidden')
     document.getElementById('dog-avatar').style.backgroundImage = "url(''images/dog-maru.jpg'')"
 
@@ -308,4 +318,4 @@ function renderEndScreen(){
 }
 
 
-export { slideDirection, currentDog, renderProfile, profileCard, profileContainer, expandedProfile, undoBtn, acceptBtn, superBtn, rejectBtn, renderRealDogArr, modifiableDogsData, dogArrayIndex, handleInfoBtnClick}
+export { slideDirection, currentDog, renderProfile, profileCard, profileContainer, expandedProfile, undoBtn, acceptBtn, superBtn, rejectBtn, renderRealDogArr, modifiableDogsData, dogArrayIndex, handleInfoBtnClick }

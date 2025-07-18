@@ -86,6 +86,41 @@
 
         <button id="profile-close-button" class="rectangular-btn-primary brand-gradient">Okay</button>
     </div>
+    <div class="user-under-review-modal chat_model hidden" id="user-chat-modal">
+        <!-- Chat Header -->
+        <div class="chat-header" style="padding: 10px; background: #4a90e2; color: white; font-weight: bold;">
+            Chat with Support
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" style="padding: 10px; height: 300px; overflow-y: auto; background: #f9f9f9;">
+            <!-- Bot message -->
+            <div class="message bot-message" style="margin-bottom: 10px;">
+                <div style="background: #e0e0e0; padding: 8px 12px; border-radius: 10px; display: inline-block;">
+                    Hello! How can I help you today?
+                </div>
+            </div>
+
+            <!-- User message -->
+            <div class="message user-message" style="text-align: right; margin-bottom: 10px;">
+                <div
+                    style="background: #4a90e2; color: white; padding: 8px 12px; border-radius: 10px; display: inline-block;">
+                    I need help with my account.
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input" style="display: flex; border-top: 1px solid #ccc; padding: 10px; background: #fff;">
+            <input type="text" id="chat-message-input" placeholder="Type a message..."
+                style="flex: 1; padding: 8px 10px; border: 1px solid #ccc; border-radius: 4px;" />
+            <button id="chat-send-button"
+                style="margin-left: 10px; background: #4a90e2; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">
+                Send
+            </button>
+        </div>
+    </div>
+
 
     <div class="user-under-review-modal hidden" id="homepage-modal">
         <div class="ai_gen_feature_container">

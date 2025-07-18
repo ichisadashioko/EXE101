@@ -1036,3 +1036,12 @@ input:checked + .slider:before{
         transform: translateY(-100%);
     }
 }
+
+.chat_model {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.chat_model>div {
+    width: 100%;
+}
