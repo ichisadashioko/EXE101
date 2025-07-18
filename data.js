@@ -1,167 +1,109 @@
 const realDogsData = [
-
     {
         name: "Emilia",
-        avatar: "./images/dog-emilia.jpg",
+        avatar: "./images/user_01.jpg",
         age: 13,
         city: "Berlin",
         country: "Germany",
-        likes:"Cats. Snow. Mailman",
+        likes: "Cats. Snow. Mailman",
         dislikes: "trucks in general",
         bio: "Kids just gone off to another family - so time to get herself out there / Not used a webcam before.",
         hasBeenSwiped: false,
         hasBeenLiked: false,
-        hasBeenSuperLiked:false
+        hasBeenSuperLiked: false
     },
     {
-        name: "Terry",
-        avatar: "./images/dog-terry.jpg",
-        age: 9,
-        city: "Venice",
-        country: "Italy",
-        likes:"Walks (not in the rain). Beans. Sausages ",
-        dislikes:"most mushrooms except Shiitake",
-        bio: "Handsome lad, will take you for a pint of stones, chips and gravy. Reply if not cat",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-    {
-        name: "Koha",
-        avatar: "./images/dog-koharu.jpg",
-        age: 3,
-        city: "Gifu",
-        country: "Japan",
-        likes:"Plastic bottles, bottles caps, owner's chopstick",
-        dislikes:"Owner's younger sister. Birds",
-        bio: "removing food from the bowl to eat off the floor and chasing a ball once then not giving it back. Get onto desks but not sure how to get off",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-    {
-        name: "Lily",
-        avatar: "./images/dog-lily.jpg",
-        age: 6,
-        city: "Brighton",
-        country: "United Kingdom",
-        likes:"getting trimmed",
-        dislikes:"showers",
-        bio: 'Petite strawberry blonde. Likes long walks and also being carried. How can I say "multiple personality disorder" without sounding mental?',
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-    {
-        name: "Ikesuke",
-        avatar: "./images/dog-ikesuke.jpg",
-        age: 8,
-        city: "Honlulu",
-        country: "United States",
-        likes:"posing, staring at people, sniffing, ",
-        dislikes:"perfumes",
-        bio: "Half-Japanese American. Loves adventure and sunshine",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-    {
-        name: "Milo",
-        avatar: "./images/dog-milo.jpg",
-        age: 10,
-        city: "Vienna",
-        country: "Austria",
-        likes:"flowers, trees, nature",
-        dislikes:"Having nails clipped, that dog down the road, early mornings",
-        bio: "Loves: the outdoors, chasing squirrels, bubble wrap.",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-
-    {
-        name: "Bob",
-        avatar: "./images/dog-bob.jpg",
-        age: 12,
-        city: "Phenoix",
-        country: "Arizona",
-        likes:"my cushion",
-        dislikes:"cold rooms",
-        bio: "Looks tough but a real softie. Just looking for someone special to love me as I am",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-
-    {
-        name: "Doge",
-        avatar: "./images/dog-doge.jpg",
-        age: 5,
-        city: "Chitose",
-        country: "Japan",
-        likes:"Beds. Tatami. Hotsprings",
-        dislikes:"Hard matresses",
-        bio: "True homebuddy. Can spend 24 hours on the couch. Enjoyed the snow. Moving back to Toronto next year. ",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-
-        {
-        name: "Martin",
-        avatar: "./images/dog-martin.jpg",
-        age: 6,
-        city: "Auckland",
-        country: "New Zealand",
-          likes:"All mammals",
-        dislikes:"Suspicious of birds",
-        bio: "Loves to swim, run, walk but most of all to eat.",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-
-        {
-        name: "Jeff",
-        avatar: "./images/dog-jeff.jpg",
-        age: 3,
-        city: "San Francisco",
-        country: "U.S.A",
-          likes:"ball, beach, grass",
-        dislikes:"rainy days, cold room",
-        bio: "Flower connoisseur and stick enthusiast. I may be a Labrador, but I promise I won't retrieve your heart and run away with it.",
-        hasBeenSwiped: false,
-        hasBeenLiked: false,
-        hasBeenSuperLiked:false
-    },
-        {
-        name: "Izzy",
-        avatar: "./images/dog-Izzy.jpg",
+        name: "Max",
+        avatar: "./images/user_02.jpg",
         age: 7,
-        city: "Berlin",
-        country: "Germany",
-        likes:"flowers and the sun",
-        dislikes:"nothing in particular",
-        bio: "I'm all about making new furry friends. I promise I won't chase after every squirrel I see.",
+        city: "Austin",
+        country: "USA",
+        likes: "Balls. Bacon. Barking at delivery men",
+        dislikes: "Being ignored",
+        bio: "Independent but secretly needy. Loves long walks and short snacks.",
         hasBeenSwiped: false,
         hasBeenLiked: false,
-        hasBeenSuperLiked:false
+        hasBeenSuperLiked: false
     },
-        {
-        name: "Dustin",
-        avatar: "./images/dog-dustin.png",
+    {
+        name: "Luna",
+        avatar: "./images/user_03.jpg",
+        age: 4,
+        city: "Hanoi",
+        country: "Vietnam",
+        likes: "Sunbathing. Cuddles. Playing with kids",
+        dislikes: "Rainy days",
+        bio: "Young and full of energy. Looking for a playmate who can keep up!",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenSuperLiked: false
+    },
+    {
+        name: "Charlie",
+        avatar: "./images/user_04.jpg",
         age: 10,
+        city: "Manchester",
+        country: "UK",
+        likes: "Chasing squirrels. Naps. Tug of war",
+        dislikes: "Vacuum cleaners",
+        bio: "Retired from herding. Now accepting belly rubs and biscuits only.",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenSuperLiked: false
+    },
+    {
+        name: "Sasha",
+        avatar: "./images/user_05.jpg",
+        age: 6,
         city: "Moscow",
         country: "Russia",
-        likes:"long walks on the beach",
-        dislikes:"chocolates",
-        bio: "Chocolate survisor. If you enjoy a chat by the fire with some tea or coffee, then I think we will get along very well ",
+        likes: "Snow. Running. Beef jerky",
+        dislikes: "Hot summers",
+        bio: "Strong, silent type. Will protect your heart (and your garden).",
         hasBeenSwiped: false,
         hasBeenLiked: false,
-        hasBeenSuperLiked:false
+        hasBeenSuperLiked: false
     },
-
-]
+    {
+        name: "Buddy",
+        avatar: "./images/user_06.jpg",
+        age: 8,
+        city: "Toronto",
+        country: "Canada",
+        likes: "Fetch. Cuddles. Treats",
+        dislikes: "Loud noises",
+        bio: "Certified good boy. Recently single after a long-term relationship with a couch.",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenSuperLiked: false
+    },
+    {
+        name: "Choco",
+        avatar: "./images/user_07.jpg",
+        age: 5,
+        city: "Bangkok",
+        country: "Thailand",
+        likes: "Swimming. Chicken. Morning walks",
+        dislikes: "Being alone",
+        bio: "Sweet and loyal. Looking for someone who never skips breakfast.",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenSuperLiked: false
+    },
+    {
+        name: "Bella",
+        avatar: "./images/user_08.jpg",
+        age: 9,
+        city: "Sydney",
+        country: "Australia",
+        likes: "Beach. Tennis balls. Belly rubs",
+        dislikes: "Bath time",
+        bio: "Down to sniff. Part-time model, full-time snuggler.",
+        hasBeenSwiped: false,
+        hasBeenLiked: false,
+        hasBeenSuperLiked: false
+    }
+];
 
 const fakeDogsData = [
 
